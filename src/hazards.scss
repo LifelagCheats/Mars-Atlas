@@ -1,0 +1,14 @@
+// Peligros (rojo = mayor, amarillo = medio, verde = menor) y alertas rojas de confirmación
+$red: #d93025; $yellow: #f9ab00; $green: #34a853;
+.toast.err { background: rgba($red, .95); max-width: 80vw; text-align: center; }
+.redbox { font-size: 13px; color: #fff; background: $red; padding: 8px 10px; border-radius: 8px; margin: 8px 0; }
+.hazards { display: flex; flex-direction: column; gap: 8px; margin: 8px 0; max-height: 42vh; overflow-y: auto;
+  .hz { border-left: 5px solid; border-radius: 8px; padding: 6px 10px; background: #f8f9fa;
+    h5 { margin: 0 0 4px; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+    ul { margin: 0; padding: 0; list-style: none; }
+    li { padding: 3px 0; font-size: 12.5px; line-height: 1.35; b { font-weight: 600; } i { font-style: normal; font-size: 11px; opacity: .7; margin-left: 4px; } span { display: block; color: #5f6368; } }
+    &.major { border-color: $red; background: #fce8e6; h5 { color: $red; } }
+    &.medium { border-color: $yellow; background: #fef7e0; h5 { color: #b06000; } }
+    &.minor { border-color: $green; background: #e6f4ea; h5 { color: #0d652d; } } } }
+.modal .card.danger { border: 3px solid $red; box-shadow: 0 0 0 4px rgba($red, .25); h3 { color: $red; } }
+.actions button.primary.danger { background: $red; border-color: $red; &:hover:not(:disabled) { background: #b3261e; } }
